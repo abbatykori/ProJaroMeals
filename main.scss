@@ -1,0 +1,143 @@
+$color-ash: #212121;
+$color-green: #1ead1e;
+
+
+$font-q: 'Quicksand', sans-serif;// font-family: 'Quicksand', sans-serif; 4/5
+$font-as: 'Alegreya Sans', sans-serif;// font-family: 'Alegreya Sans', sans-serif; 4/7
+
+
+// Generic
+// ---------
+// ---------
+// 
+*, *:after, *:before {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: $font-as;
+	font-weight: 400;
+	color: #555;
+}
+html{}
+body{
+	background-color: #F5F5DC;
+	background-color: #f7f7f7;
+}
+h1,h2,h3,
+h4,h5,h6 {
+	font-weight: normal;
+	margin: 10px 0;
+}
+hr {
+    height: 1px;
+    border: 0;
+    margin: 7px 0;
+    background: #666666;
+    background: rgba(102, 102, 102, 0.3);
+    // box-shadow: inset 0 12px 12px -12px rgba(0,0,0,0.5);
+}
+img{
+	max-width: 100%;
+	object-fit: cover;
+}
+.clear:after{
+	content: "";
+    display: table;
+    clear: both;
+}
+.float-left{
+	float: left !important;
+}
+.float-right{
+	float: right !important;
+}
+
+.button, .button-green{
+	font-size: 14px;
+	color: #fff;
+	background:$color-ash;
+	border: 1px solid $color-ash;
+	padding: 7px 15px;
+	outline: none;
+	text-decoration: none;
+	will-change: opacity, transform;
+	-webkit-transition: all .15s ease-out;
+	-moz-transition: all .15s ease-out;
+	-o-transition: all .15s ease-out;
+	-ms-transition: all .15s ease-out;
+	transition: all .15s ease-out;
+	&:hover{
+		background: #fff;
+		color: $color-ash;
+	}
+}
+.button-green{
+	background:$color-green;
+	border: 1px solid $color-green;
+	&:hover{
+		background: #fff;
+		color: $color-green;
+	}
+}	
+
+.logo{
+	display: block;
+	max-width: 400px;
+	margin: 1rem auto;
+	margin-bottom: 2rem;
+}
+.card{
+	background: #fff;
+    border: 1px solid #eee;
+    padding: 1rem;
+    margin-bottom: 24px !important;
+
+	will-change: opacity, transform;
+	-webkit-transition: all .15s ease-out;
+	-moz-transition: all .15s ease-out;
+	-o-transition: all .15s ease-out;
+	-ms-transition: all .15s ease-out;
+	transition: all .15s ease-out;
+	-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	&:hover{
+		-webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+	  			box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);			
+	}
+}
+.menu-item{
+	img{
+		height: 150px !important;
+		width: 300px !important;
+		margin: auto;
+		object-fit: cover;
+	}
+	h3{
+		margin: 8px 0;
+	}
+	.title{
+		margin: 8px 0;
+	}
+	.desc{
+		margin: 8px 0;
+		font-size: 14px;
+    	line-height: 20px;
+	}
+	.misc, .price{
+		margin: 8px 0;
+	}
+	.price{
+		b{
+			font-weight: 700;
+			font-size: 13px;
+			font-family: $font-as;
+		}
+	}
+	.qty-input{
+		width: 3rem;
+		padding: 5px;
+	}
+}
+@import 'onepcssgrid';
