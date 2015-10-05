@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projaro Meals Template by AbbatyKori">
+    <title>Admin - ProJaro Meals</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="chartist.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,700|Alegreya+Sans:400,500' rel='stylesheet' type='text/css'>
+
+
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+    <div id="layout">
+        <!-- Menu toggle -->
+        <a href="#menu" id="menuLink" class="menu-link">
+            <!-- Hamburger icon -->
+            <span></span>
+        </a>
+
+        <div id="menu">
+            <div class="pure-menu">
+                <a class="pure-menu-heading" href="#">Admin <i>(Logged in)</i></a>
+
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item"><hr></li>
+                    <li class="pure-menu-item"><a href="admin.html" class="pure-menu-link">Dashboard</a></li>
+                    <li class="pure-menu-item"><a href="orders.html" class="pure-menu-link">Orders</a></li>
+                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Food Menus</a></li>
+                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Sales</a></li>
+                    <li class="pure-menu-item"><hr></li>
+                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Help and Support</a></li>
+                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="main">
+            <header>
+                <div class="onepcssgrid-1200">
+                    <div class="onerow">
+                        <img src="img/logo.png" alt="" class="logo">
+                    </div>
+                </div>
+            </header>
+
+            <div class="onepcssgrid-1200 content">
+                		<div class="onerow">
+			<div class="">
+				<h1>Orders</h1>
+				<div class="card">
+					<table>
+						<tr>
+							<th>
+								
+							</th> 
+							<th>Item</th>
+							<th>Qty</th>
+							<th>Amount</th>
+							<th>Actions</th>
+						</tr>
+						<tr>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>Fruit Salad</td>
+							<td>2</td>
+							<td>4,700</td>
+							<td>
+								<button class="button">Cancel</button>
+								<button class="button-green">Approve</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>Spring Rolls</td>
+							<td>2</td>
+							<td>4,700</td>							
+							<td>
+								<button class="button">Cancel</button>
+								<button class="button-green">Approve</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>Furan da Nono</td>
+							<td>2</td>
+							<td>4,700</td>
+							<td>
+								<button class="button">Cancel</button>
+								<button class="button-green">Approve</button>
+							</td>
+						</tr>
+					</table>
+					<br>
+					<button class="button">Cancel All</button>
+					<button class="button-green">Approve All</button>
+					<br>
+				</div>
+			</div>
+
+
+		</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="menu.js"></script>
+    <script src="chartist.min.js"></script>
+
+    <script>
+      // Initialize a Line chart in the container with the ID chart1
+      new Chartist.Line('#chart1', {
+        labels: [1, 2, 3, 4],
+        series: [[100, 120, 180, 200]]
+    });
+
+      // Initialize a Line chart in the container with the ID chart2
+      new Chartist.Bar('#chart2', {
+        labels: [1, 2, 3, 4],
+        series: [[5, 2, 8, 3]]
+    });
+
+      // Initialize a Line chart in the container with the ID chart2
+      var data = {
+          series: [5, 3, 4]
+      };
+
+      var sum = function(a, b) { return a + b };
+
+      new Chartist.Pie('#chart3', data, {
+          labelInterpolationFnc: function(value) {
+            return Math.round(value / data.series.reduce(sum) * 100) + '%';
+        }
+    });
+      // Initialize a Line chart in the container with the ID chart4
+      new Chartist.Line('#chart4', {
+        labels: [1, 2, 3, 4],
+        series: [[25, 120, 250, 30]]
+    });
+
+      // Initialize a Line chart in the container with the ID chart5
+      new Chartist.Bar('#chart5', {
+        labels: [1, 2, 3, 4],
+        series: [[15, 29, 18, 30]]
+    });
+
+      // Initialize a Line chart in the container with the ID chart6
+      var data = {
+          series: [8, 2, 4]
+      };
+
+      var sum = function(a, b) { return a + b };
+
+      new Chartist.Pie('#chart6', data, {
+          labelInterpolationFnc: function(value) {
+            return Math.round(value / data.series.reduce(sum) * 100) + '%';
+        }
+    });
+  </script>
+</body>
+</html>

@@ -53,7 +53,55 @@ img{
 .float-right{
 	float: right !important;
 }
-
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table {
+  border-collapse: collapse;
+  border: 1px solid #eee;
+  border-bottom: 2px solid $color-ash;
+  width: 100%;
+  margin-bottom: 10px;
+  table-layout : fixed;
+  tr {
+  	&:hover {
+      background: #f4f4f4;      
+      td {
+        color: #555;
+      }
+    }
+  }
+  th, td {
+    color: #999;    
+    padding: 12px 35px;
+    padding: 7px 14px;
+    border-collapse: collapse;
+  }
+  th {
+    background: $color-ash;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: $font-q;
+    font-weight: 700;
+    text-align: left;
+    &.last {
+      border-right: none;
+    }
+  }
+    td{
+        font-size: 13px;
+    }
+}
 .button, .button-green{
 	font-size: 14px;
 	color: #fff;
@@ -100,8 +148,8 @@ img{
 	-o-transition: all .15s ease-out;
 	-ms-transition: all .15s ease-out;
 	transition: all .15s ease-out;
-	-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	// -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+		// box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 	&:hover{
 		-webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 	  			box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);			
@@ -119,6 +167,9 @@ img{
 	}
 	.title{
 		margin: 8px 0;
+		color: $color-green;
+		font-family: $font-q;
+		font-weight: 700;
 	}
 	.desc{
 		margin: 8px 0;
@@ -141,3 +192,4 @@ img{
 	}
 }
 @import 'onepcssgrid';
+// @import 'menu';
